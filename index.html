@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>My Portfolio</title>
+
+</head>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+        background-color: #D1E9F6;
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+    }
+
+    .navbar {
+        padding: 15px;
+        z-index: 1000;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        color: #fff;
+        margin-left: 15px;
+    }
+
+    .nav-link:hover {
+        color: #ddd;
+    }
+
+    .home-section {
+        color: #fff;
+        padding: 100px 0;
+        height: auto;
+        text-align: center;
+    }
+
+    .home-section h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .home-section .highlight {
+        color: #ff6347;
+    }
+
+    .home-section p.lead {
+        font-size: 1.25rem;
+        color: #C75B7A;
+    }
+
+    #element {
+        color: #574127;
+        font-size: 2.1rem;
+    }
+
+    .home-section img {
+        border: 5px solid #fff;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .about-section,
+    .projects-section,
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .about-section h2,
+    .projects-section h2,
+    .contact-section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .project-card {
+        background: #eb9a37;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 15px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .project-card img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .project-card h4 {
+        margin-top: 10px;
+        font-size: 1.25rem;
+    }
+
+    .msg1 {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .contact-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .contact-section ul li {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        background: #333;
+        color: #fff;
+        padding: 15px 0;
+    }
+
+    #abc {
+        height: 300px;
+        width: 300px;
+        align-items: center;
+    }
+
+    #home .container h1 {
+        color: #021526;
+    }
+
+    #name {
+        color: #021526;
+    }
+
+    .Experience {
+        font-weight: bold;
+    }
+
+    .Certifications {
+        font-weight: bold;
+    }
+
+    .name1 {
+        color: purple;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .home-section {
+            padding: 50px 0;
+        }
+
+        .home-section h1 {
+            font-size: 2rem;
+        }
+
+        .home-section img {
+            width: 120px;
+            height: 120px;
+        }
+
+        .project-card {
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .project-card h4 {
+            font-size: 1rem;
+        }
+
+        .about-section,
+        .projects-section,
+        .contact-section {
+            padding: 30px 0;
+        }
+
+        .contact-section ul {
+            padding-left: 0;
+        }
+
+        .contact-section ul p {
+            margin-bottom: 5px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .navbar-brand {
+            font-size: 1.25rem;
+        }
+
+        .navbar-nav .nav-item {
+            margin-bottom: 10px;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 0.875rem;
+        }
+
+        .home-section h1 {
+            font-size: 1.5rem;
+        }
+
+        .project-card {
+            padding: 5px;
+        }
+
+        .project-card h4 {
+            font-size: 0.875rem;
+        }
+
+        .about-section h2,
+        .projects-section h2,
+        .contact-section h2 {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#"> <b>My Portfolio</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home"><b>Home</b> </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about"> <b>About Me</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects"> <b>Projects</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact"> <b>Contact</b></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section text-center">
+        <div class="container">
+            <!-- <h1>Hi, I'm<span class="highlight">Bhavesh Sonawane</span></h1> -->
+            <h1>Hi, I'm <span class="name1"></span></h1>
+           <!-- <span class="purple">Bhavesh Sonawane</span> -->
+            <!-- <p class="lead">A Passionate Web Developer with Experience in Modern Technologies</p> -->
+         
+            <img src="bhavesh_photo.png" alt="Professional Photo" class="img-fluid rounded-circle" id="abc">
+            <br>
+            <span id="element"></span>
+        </div>
+    </section>
+     
+    <!-- About Me Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <h2 class="abtme"><b>About Me</b></h2>
+            <p class="msg1"> "Driven engineering student with a strong interest in web development and hands-on experience in full stack technologies. Eager to contribute to collaborative projects within the Prodigy InfoTech that enhance my technical skills and creativity."<p>
+   
+    <br>
+    <br>
+    <br>
+    <h3><b>SKILLS</b></h3>
+    <hr>
+    <ul> 
+        <li><p><b>Programming Languages:</b>C, C++, Javascript</p></li>
+        <li><p><b>Frameworks and Library:</b>ReactJS, Node.js, Bootstrap</p></li>
+        <li><p><b>Technologies:</b>HTML, CSS, MySQL, MongoDB</p></li>
+        <li><p><b>Tools:</b>Git , MATLAB</p></li>
+        <li><p><b>Problem Solving:</b>Data Structures and Algorithms in C++</p></li>
+    </ul>
+    <br><br><br>
+            <h3><b>Education</b></h3>
+            <hr>
+            <ul>
+                <i><p><b>K.K.Wagh Institude of Engineering Education and Research, Nashik - (2022 - 2026)</b></p></i>
+                <li><p>B.Tech in Artificial Intelligence and Data Science | S.Y.BTech - CGPA: 7.57/10</p></li>
+                <i><p><b> K.N.D.M. Junior College, Chhatrapati Sambhajinagar - (2021 - 2022)</b></p></i>
+                <li><p>HSC (Class XII), Percentage : 73.50%</p></li>
+                <i><p><b> S.G.M.V. Public School, Jalgaon - (2019 - 2020)</b></p></i>
+                <li><p>SSC (Class X), Percentage : 89.60%</p></li>
+            </ul>
+    <br>
+    <br>
+    <br>
+            <h3 class=" Certifications"> Certifications</h3>
+            <hr>
+            <ul>
+                <li><strong> Full Stack Web Development (Udemy)</strong></li>
+                <li><strong> App Development (Udemy)</strong></li>
+            </ul>
+            <br>
+    <br>
+    <br>
+            <h3 class="Experience">Professional Experience</h3>
+            <hr>
+            <ul>
+                <li><strong>Open Source Experience as Web Developer</strong></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section py-5 bg-light">
+        <div class="container">
+            <h2><b>Project</b></h2>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="project1.png" alt="Project 1" class="img-fluid">
+                        <h4>Project 1</h4>
+                        <p> Developed an interactive navigation menu for ProDigy Infotech's Task-01, featuring dynamic color and style changes triggered by scrolling and hovering. Utilized HTML for structure, CSS for styling, and JavaScript for interactivity, ensuring the menu remains fixed and visible across all pages, enhancing the responsive landing page experience.</p>
+                        Link: <a href=" https://github.com/bhavesh-2004/PRODIGY_WD_01" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="project2.png" alt="Project 2" class="img-fluid">
+                        <h4>Project 2</h4>
+                        <p>Built a stopwatch web application using HTML, CSS, and JavaScript to provide functionalities for starting, pausing, and resetting the timer, as well as tracking lap times. The application features a user-friendly interface for accurate time measurement and recording. Designed to be interactive and responsive, enhancing the overall user experience</p>
+                        Link: <a href=" https://github.com/bhavesh-2004/PRODIGY_WD_02" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <img src="project3.png" alt="Project 3" class="img-fluid">
+                        <h4>Project 3</h4>
+                        <p> Developed a Tic-Tac-Toe web application using HTML, CSS, and JavaScript, featuring interactive gameplay with functions for user clicks, game state tracking, and win condition checks. Designed to allow users to play against each other or an AI opponent, providing an engaging and dynamic gaming experience.</p>
+                        Link: <a href="  https://github.com/bhavesh-2004/PRODIGY_WD_03" target="_blank">GitHub</a>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container text-center">
+            <h2><b>Contact Me</b></h2>
+            <p>If you have any questions or would like to work together, feel free to reach out!</p>
+            <ul class="list-unstyled">
+               
+                 <a href="mailto:bhaveshsonawane2020@gmail.com " target="_blank">Email</a>
+                 <br>
+                 <a href=" tel:+919322545899" target="_blank">Phone</a>
+                 <br>
+                 <a href="https://www.linkedin.com/in/bhavesh-sonawane-302598263/" target="_blank">LinkedIn</a>
+                 <br>
+                 <a href="https://github.com/bhavesh-2004" target="_blank">GitHub</a>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-dark text-white">
+        <p>&copy; 2024 [Bhavesh Sonawane]. All rights reserved.</p>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('.name1', {
+          strings: [' Bhavesh Sonawane'],
+          typeSpeed: 100,
+        });
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['A Passionate Web Developer with Experience in Modern Technologies.'],
+          typeSpeed: 100,
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
